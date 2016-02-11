@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function helloWorld()
+        { //it's not pretty, but it works
+            var txtName = document.getElementById("txtName").value
+            document.getElementById("lblHi").innerText = "Hello " + txtName
+        }
+    </script>
+    <input type="text" id="txtName" placeholder="your name"><br>
+    <button onclick="helloWorld()">Say hi</button><br>
+    <div id="lblHi"></div>
+
+</head>
+<body>
+
+</body>
+</html>

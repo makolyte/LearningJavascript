@@ -1,0 +1,129 @@
+  <!--
+  Challenge here
+   http://codepen.io/wesbos/pen/zrLjYq
+  -->
+<html>
+<body>
+
+  <style>
+          html {
+      font-family: sans-serif;
+      background:#ffc600;
+    }
+
+    .inbox {
+      max-width:400px;
+      margin:50px auto;
+      background:white;
+      border-radius:5px;
+      box-shadow:10px 10px 0 rgba(0,0,0,0.1);
+    }
+
+    .item {
+      display:flex;
+      align-items:center;
+      border-bottom: 1px solid #F1F1F1;
+    }
+
+    .item:last-child {
+      border-bottom:0;
+    }
+
+
+    input:checked + p {
+      background:#F9F9F9;
+      text-decoration: line-through;
+    }
+
+    input[type="checkbox"] {
+      margin:20px;
+    }
+
+    p {
+      margin:0;
+      padding:20px;
+      transition:background 0.2s;
+      flex:1;
+      font-family:'helvetica neue';
+      font-size: 20px;
+      font-weight: 200;
+      border-left: 1px solid #D1E2FF;
+    }
+
+    .details {
+      text-align: center;
+      font-size: 15px;
+    }
+
+  </style>
+  <div class="inbox">
+    <div class="item">
+      <input type="checkbox">
+      <p>This is an inbox layout.</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p>Check one item</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p>Hold down your Shift key</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p>Check a lower item</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p>Everything inbetween should also be set to checked</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p>Try do it with out any libraries</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p>Just regular JavaScript</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p>Good Luck!</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p>Don't forget to tweet your result!</p>
+    </div>
+  </div>
+
+  <p class="details">Here is a <a href="http://wes.io/f1oa" target="_blank">video</a> on how it should work. I'll post my answer after everyone has had a chance to do it.</p>
+
+    <script>
+
+        checkHandler = function()
+        {
+          console.log("i'm in checkhandler")
+        }
+
+        inputs = document.getElementsByTagName("input")
+        console.log("Length of inputs = " + inputs.length)
+        checkboxes = Array.prototype.slice.call(inputs)
+
+        checkboxes = document.getElementsByTagName("input")
+        for(i = 0; i < checkboxes.length; i++)
+        {
+          console.log(i)
+          checkboxes[i].addEventListener("click", checkHandler)
+        }
+/*
+        for(i in checkboxes)
+        {
+            console.log(i)
+
+           console.log(inputs[i])
+           checkboxes[i].addEventListener("click", checkHandler)
+        }*/
+
+
+  </script>
+</body>
+</html>

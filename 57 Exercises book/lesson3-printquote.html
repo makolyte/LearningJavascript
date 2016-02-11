@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<script>
+    outputter = function(){
+        auth = document.getElementById("txtAuthor").value
+        quote = document.getElementById("txtQuote").value
+        document.getElementById("output").innerHTML =
+                '<p>"' + quote + '"' +
+                        '<br>' +
+                'by ' + auth + '</p>'
+    }
+
+</script>
+    <label>Quote</label>
+    <input type="text" id="txtQuote">
+    <br>
+    <label>Author</label>
+    <input type="text" id="txtAuthor">
+    <br>
+    <button role="button" onclick="outputter()">Outputter</button>
+
+    <br>
+    <div id="output">
+
+    </div>
+</body>
+</html>

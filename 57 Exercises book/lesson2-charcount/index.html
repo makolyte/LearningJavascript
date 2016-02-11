@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+
+        function countChars()
+        {
+            input = document.getElementById("txtInput").value
+            document.getElementById("output").innerText = input + " is " + input.length + " chars"
+
+        }
+    </script>
+
+    <label for="txtInput">"What is the input string?</label>
+    <input type="text" onkeypress="countChars()" placeholder="input str"  id ="txtInput">
+    <br>
+    <label id="output"></label>
+
+</body>
+</html>
