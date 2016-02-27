@@ -8,10 +8,18 @@
     <ul id="cat-list"></ul>
     <div id="cat">
 
-        <h2 id="cat-name"></h2>
-        <div id="cat-count"></div>
-        <img id="cat-img" src="" alt="cute cat">
+        <h2 data-bind="text: name"></h2>
+        <div data-bind="text: clickCount"></div>
+        <img data-bind="click: incrementCounter, attr:{src: imgSrc}" src="" alt="cute cat">
+        <table>
+            <tbody data-bind="foreach: nicknames">
+                <tr>
+                    <td data-bind="text: name">
 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <script src="js/lib/knockout-3.2.0.js"></script>
     <script src="js/app.js"></script>
