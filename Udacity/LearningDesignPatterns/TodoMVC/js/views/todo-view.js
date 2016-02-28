@@ -20,6 +20,7 @@ var app = app || {};
 			'click .toggle': 'toggleCompleted',
 			'dblclick label': 'edit',
 			'click .destroy': 'clear',
+			'click .edit-btn':'edit',
 			'keypress .edit': 'updateOnEnter',
 			'keydown .edit': 'revertOnEscape',
 			'blur .edit': 'close'
@@ -33,6 +34,7 @@ var app = app || {};
 			this.listenTo(this.model, 'change', this.render);
 			this.listenTo(this.model, 'destroy', this.remove);
 			this.listenTo(this.model, 'visible', this.toggleVisible);
+			this.listenTo(this.model, 'edit-btn', this.edit);
 		},
 
 		// Re-render the titles of the todo item.
