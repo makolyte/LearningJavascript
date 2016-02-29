@@ -23,7 +23,8 @@ var app = app || {};
 			'click .edit-btn':'edit',
 			'keypress .edit': 'updateOnEnter',
 			'keydown .edit': 'revertOnEscape',
-			'blur .edit': 'close'
+			'blur .edit': 'close',
+			'click .priority-btn':'togglePriority'
 		},
 
 		// The TodoView listens for changes to its model, re-rendering. Since
@@ -55,6 +56,10 @@ var app = app || {};
 			this.toggleVisible();
 			this.$input = this.$('.edit');
 			return this;
+		},
+
+		togglePriority:function(){
+			this.style.backgroundColor = 'red'
 		},
 
 		toggleVisible: function () {
